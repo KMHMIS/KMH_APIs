@@ -17,6 +17,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using System.Security.Cryptography;
+using KMHAPIs.Common;
 
 namespace KMHAPIs.Repo
 {
@@ -50,12 +51,13 @@ namespace KMHAPIs.Repo
                 //HMACSHA1 hash = new HMACSHA1();
                 //hash.Key = HexToByte("A824CBB621ECE844049C3AECFC29D4787A3A885F967D869F583652354BC84E9D024D892095840E819C8C31DB958281C8BD06726AFF29F5DA570954569C967C7B");
                 //string encodedPassword = Convert.ToBase64String(hash.ComputeHash(Encoding.Unicode.GetBytes(rm.password)));
-                parameters.Add("password", rm.password, DbType.String, ParameterDirection.Input);
+                //parameters.Add("password",CommonMethods.ConvertToEncrpt( rm.password), DbType.String, ParameterDirection.Input);
                 
                 
-                //CustomMemebership custom = new CustomMemebership();
-                //string enc = custom.EncryptedPassword(rm.password);
-                //EncryptedPassword(rm.password);
+               // CommonMethods custom = new CommonMethods();
+                string enc = CommonMethods.ConvertToEncrpt(rm.password);
+                parameters.Add("password", enc, DbType.String, ParameterDirection.Input);
+                //CommonMethods.ConvertToEncrpt(rm.password);
 
 
 

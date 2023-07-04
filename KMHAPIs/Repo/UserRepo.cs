@@ -6,6 +6,7 @@ using KMHAPIs.Models.SpResponseModel;
 using Dapper;
 using System.Data;
 using System.Xml.Linq;
+using KMHAPIs.Common;
 
 namespace KMHAPIs.Repo
 {
@@ -56,7 +57,7 @@ namespace KMHAPIs.Repo
                 parameters.Add("@FirstName", rm.FirstName, DbType.String, ParameterDirection.Input);
                 parameters.Add("@LastName", rm.LastName, DbType.String, ParameterDirection.Input);
                 parameters.Add("@UserName", rm.UserName, DbType.String, ParameterDirection.Input);
-                parameters.Add("@Password", rm.Password, DbType.String, ParameterDirection.Input);
+                parameters.Add("@Password",CommonMethods.ConvertToEncrpt(rm.Password), DbType.String, ParameterDirection.Input);
                 parameters.Add("@Reason", rm.Reason, DbType.String, ParameterDirection.Input);
                 parameters.Add("@CreatedBy", rm.CreatedBy, DbType.Int64, ParameterDirection.Input);
                 IEnumerable<dynamic> data = await db.Get<dynamic>(procedureName, parameters);
