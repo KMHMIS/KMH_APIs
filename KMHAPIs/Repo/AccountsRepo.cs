@@ -55,8 +55,10 @@ namespace KMHAPIs.Repo
                 
                 
                // CommonMethods custom = new CommonMethods();
+
                 string enc = CommonMethods.ConvertToEncrpt(rm.password);
                 parameters.Add("password", enc, DbType.String, ParameterDirection.Input);
+
                 //CommonMethods.ConvertToEncrpt(rm.password);
 
 

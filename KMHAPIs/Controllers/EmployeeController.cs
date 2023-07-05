@@ -57,5 +57,11 @@ namespace KMHAPIs.Controllers
         {
             return Ok(await _repo.GetDataByEmployeeID(id,action));
         }
+        [HttpGet]
+        [Route("GetEmployeeByActive")]
+        public async Task<IActionResult> GetEmployeeByActive(string action)
+        {
+            return Ok(await _repo.GetEmployeeByActive(action));
+        }
     }
 }
