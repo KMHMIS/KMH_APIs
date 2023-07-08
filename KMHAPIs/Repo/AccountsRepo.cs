@@ -85,13 +85,13 @@ namespace KMHAPIs.Repo
                 }
                 if (data.employeeId != null)
                 {
-                    response.data = new { data.userName,data.roleName, data.employeeId, token = encodedtoken};
+                    response.data = new { data.userName,data.roleName, data.employeeId,data.email, token = encodedtoken};
                     response.status = true;
                     response.message = data.message;
                 }
                 else
                 {
-                    response.data = new { data.userName,data.roleName, data.employeeId, token = encodedtoken };
+                    response.data = new { data.userName,data.roleName, data.employeeId,data.email, token = encodedtoken };
                     response.status = false;
                     response.message = data.message;
                 }
