@@ -13,7 +13,7 @@ using System.Xml.Linq;
 
 namespace KMHAPIs.Controllers
 {
-    [Route("api/controller")]
+    [Route("api/[controller]")]
     [ApiController]
     public class FormController : ControllerBase
     {
@@ -45,6 +45,18 @@ namespace KMHAPIs.Controllers
         public async Task<IActionResult> DeleteForm(int id, string action)
         {
             return Ok(await _repo.DeleteForm(id, action));
+        }
+        [HttpGet]
+        [Route("GetFormByActive")]
+        public async Task<IActionResult> GetFormByActive(string action)
+        {
+            return Ok(await _repo.GetFormByActive(action));
+        }
+        [HttpGet]
+        [Route("GetDataTable")]
+        public async Task<IActionResult> GetDataTable(string action)
+        {
+            return Ok(await _repo.GetDataTable(action));
         }
     }
 }

@@ -113,6 +113,26 @@ namespace KMHAPIs.Repo
                 return response;
             }
         }
-
+        public async Task<GenericResponseModel> GetTableData(string action)
+        {
+            try
+            {
+                var procedureName = "CRUD_AssignFormToRole";
+                var parameters = new DynamicParameters();
+                parameters.Add("@Action", action, DbType.String, ParameterDirection.Input);
+                IEnumerable<dynamic> data = await db.GetAll<dynamic>(procedureName, parameters);
+                response.message = "success";
+                response.status = true;
+                response.data = data;
+                return response;
+            }
+            catch (Exception ex)
+            {
+                response.data = "";
+                response.message = ex.Message;
+                response.status = false;
+                return response;
+            }
+        }
     }
 }

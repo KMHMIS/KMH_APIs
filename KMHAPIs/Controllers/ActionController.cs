@@ -39,5 +39,11 @@ namespace KMHAPIs.Controllers
         {
             return Ok(await _repo.DeleteAction(id, action));
         }
+        [HttpGet]
+        [Route("GetActionByActive")]
+        public async Task<IActionResult> GetActionByActive(string action)
+        {
+            return Ok(await _repo.GetActionByActive(action));
+        }
     }
 }

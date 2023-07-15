@@ -9,6 +9,7 @@ namespace KMHAPIs.IRepo
         Task<GenericResponseModel> InsertAssignFormToRole(AssignFormToRoleRequestModel rm);
         Task<GenericResponseModel> UpdateAssignFormToRole(AssignFormToRoleRequestModel rm);
         Task<GenericResponseModel> DeleteAssignFormToRole(int id, string action);
+        Task<GenericResponseModel> GetTableData(string action);
 
     }
 }

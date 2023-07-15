@@ -10,5 +10,6 @@ namespace KMHAPIs.IRepo
         Task<GenericResponseModel> UpdateDesignation(DesignationRequestModel rm);
         Task<GenericResponseModel> DeleteDesignation(int Id, string action);
         Task<GenericResponseModel> GetDesignationByActive(string action);
+        Task<GenericResponseModel> GetTableData(string action);
     }
 }

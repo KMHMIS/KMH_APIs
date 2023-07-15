@@ -9,6 +9,9 @@ namespace KMHAPIs.IRepo
         Task<GenericResponseModel> InsertForm(FormRequestModel rm);
         Task<GenericResponseModel> UpdateForm(FormRequestModel rm);
         Task<GenericResponseModel> DeleteForm(int id, string action);
+        Task<GenericResponseModel> GetFormByActive(string action);
+        Task<GenericResponseModel> GetDataTable(string action);
+
 
     }
 }

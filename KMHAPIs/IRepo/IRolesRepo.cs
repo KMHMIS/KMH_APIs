@@ -10,5 +10,6 @@ namespace KMHAPIs.IRepo
         Task<GenericResponseModel> InsertRoles(RolesRequestModel rm);
         Task<GenericResponseModel> UpdateRoles(RolesRequestModel rm);
         Task<GenericResponseModel> DeleteRoles(int EmployeeId,string action);
+        Task<GenericResponseModel> GetTableData(string action);
     }
 }

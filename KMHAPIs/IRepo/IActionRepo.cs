@@ -9,5 +9,7 @@ namespace KMHAPIs.IRepo
         Task<GenericResponseModel> InsertAction(ActionRequestModel rm);
         Task<GenericResponseModel> UpdateAction(ActionRequestModel rm);
         Task<GenericResponseModel> DeleteAction(int Id, string action);
+
+        Task<GenericResponseModel> GetActionByActive(string action);
     }
 }

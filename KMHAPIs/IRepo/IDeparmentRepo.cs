@@ -10,6 +10,7 @@ namespace KMHAPIs.IRepo
         Task<GenericResponseModel> UpdateDeparment(DeparmentRequestModel rm);
         Task<GenericResponseModel> DeleteDeparment(int id,string action);
         Task<GenericResponseModel> GetDeparmentByActive(string action);
-                    
+        Task<GenericResponseModel> GetTableData(string action);
+
     }
 }
