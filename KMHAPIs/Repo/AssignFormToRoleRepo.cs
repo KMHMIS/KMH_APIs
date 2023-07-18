@@ -51,6 +51,7 @@ namespace KMHAPIs.Repo
                 parameters.Add("@Action", rm.Action, DbType.String, ParameterDirection.Input);
                 parameters.Add("@FormID", rm.FormID, DbType.Int64, ParameterDirection.Input);
                 parameters.Add("@RoleID", rm.RoleID, DbType.Int64, ParameterDirection.Input);
+                parameters.Add("@ActionID", rm.ActionID, DbType.String, ParameterDirection.Input);
                 parameters.Add("@CreatedBy", rm.CreatedBy, DbType.Int64, ParameterDirection.Input);
                 IEnumerable<dynamic> data = await db.Get<dynamic>(procedureName, parameters);
                 response.message = "success";

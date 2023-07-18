@@ -9,5 +9,7 @@ namespace KMHAPIs.IRepo
         Task<GenericResponseModel> InsertAssignRoleToUser(AssignRoleToUserRequestModel rm);
         Task<GenericResponseModel> UpdateAssignRoleToUser(AssignRoleToUserRequestModel rm);
         Task<GenericResponseModel> DeleteAssignRoleToUser(int id, string action);
+
+        Task<GenericResponseModel> GetTableData(string action);
     }
 }

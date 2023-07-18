@@ -46,5 +46,11 @@ namespace KMHAPIs.Controllers
         {
             return Ok(await _repo.DeleteAssignRoleToUser(id, action));
         }
+        [HttpGet]
+        [Route("GetTableData")]
+        public async Task<IActionResult> GetTableData(string action)
+        {
+            return Ok(await _repo.GetTableData(action));
+        }
     }
 }
