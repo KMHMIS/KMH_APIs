@@ -21,5 +21,11 @@ namespace KMHAPIs.Controllers
         {
             return Ok(await _accountsRepo.Login(loginRequestModel));
         }
+        [HttpGet]
+        [Route("GetUserFroms")]
+        public async Task<IActionResult> GetUserFroms(string UserName,string action)
+        {
+            return Ok(await _accountsRepo.GetUserForms(UserName,action));
+        }
     }
 }

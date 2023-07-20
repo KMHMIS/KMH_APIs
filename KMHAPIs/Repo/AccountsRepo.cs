@@ -72,7 +72,7 @@ namespace KMHAPIs.Repo
 
                     var claims = new[]
                     {
-                    new Claim(ClaimTypes.Role,data.roleName)
+                    new Claim(ClaimTypes.Role,data.userName)
                 };
                     var token = new JwtSecurityToken(
                         issuer: _configuration["JWT:Secret"],
@@ -103,6 +103,28 @@ namespace KMHAPIs.Repo
                 response.data = "";
                 response.status = false;
                 response.message = ex.Message;
+                return response;
+            }
+        }
+        public async Task<GenericResponseModel> GetUserForms(string UserName ,string action)
+        {
+            try
+            {
+                var procedureName = "CRUD_Users";
+                var parameters = new DynamicParameters();
+                parameters.Add("@UserName", UserName, DbType.String, ParameterDirection.Input);
+                parameters.Add("@Action", action, DbType.String, ParameterDirection.Input);
+                IEnumerable<dynamic> data = await db.GetAll<dynamic>(procedureName, parameters);
+                response.message = "success";
+                response.status = true;
+                response.data = data;
+                return response;
+            }
+            catch (Exception ex)
+            {
+                response.data = "";
+                response.message = ex.Message;
+                response.status = false;
                 return response;
             }
         }
