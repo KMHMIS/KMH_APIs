@@ -46,7 +46,7 @@ namespace KMHAPIs.Repo
         }
 
         public async Task<GenericResponseModel> InsertUser(UserRequestModel rm)
-        {
+       {
             try
 
             {
@@ -59,7 +59,7 @@ namespace KMHAPIs.Repo
                 parameters.Add("@UserName", rm.UserName, DbType.String, ParameterDirection.Input);
                 parameters.Add("@Password",CommonMethods.ConvertToEncrpt(rm.Password), DbType.String, ParameterDirection.Input);
                 parameters.Add("@Reason", rm.Reason, DbType.String, ParameterDirection.Input);
-                parameters.Add("@RoleID", rm.RoleID, DbType.Int64, ParameterDirection.Input);
+                parameters.Add("@RoleID", rm.RoleID, DbType.String, ParameterDirection.Input);
                 parameters.Add("@CreatedBy", rm.CreatedBy, DbType.Int64, ParameterDirection.Input);
                 IEnumerable<dynamic> data = await db.Get<dynamic>(procedureName, parameters);
                 response.message = "success";
