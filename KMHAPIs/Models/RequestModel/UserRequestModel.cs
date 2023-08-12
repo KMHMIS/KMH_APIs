@@ -5,6 +5,7 @@
         public string Action { get; set; }
         public long UserID{ get; set; }
         public long EmployeeID { get; set; }
+        public long DeparmentID { get; set; }
         public string RoleID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

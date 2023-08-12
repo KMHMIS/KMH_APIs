@@ -8,5 +8,8 @@
         
         public string email { get; set; }
         public string message { get; set; }
+        public string userID { get;set; }
+        public string deparmentID { get; set; }
+        public string loginTime { get; set; }
     }
 }

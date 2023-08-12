@@ -54,6 +54,7 @@ namespace KMHAPIs.Repo
                 var parameters = new DynamicParameters();
                 parameters.Add("@Action", rm.Action, DbType.String, ParameterDirection.Input);
                 parameters.Add("@EmployeeID", rm.EmployeeID, DbType.Int64, ParameterDirection.Input);
+                parameters.Add("@DepartmentID", rm.DeparmentID, DbType.Int64, ParameterDirection.Input);
                 parameters.Add("@FirstName", rm.FirstName, DbType.String, ParameterDirection.Input);
                 parameters.Add("@LastName", rm.LastName, DbType.String, ParameterDirection.Input);
                 parameters.Add("@UserName", rm.UserName, DbType.String, ParameterDirection.Input);
