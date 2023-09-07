@@ -23,6 +23,11 @@ builder.Services.AddTransient<IDeparmentRepo, DeparmentRepo>();
 builder.Services.AddTransient<IAssignFormToRoleRepo, AssignFormToRoleRepo>();
 builder.Services.AddTransient<IAssignRoleToUserRepo, AssignRoleToUserRepo>();
 builder.Services.AddTransient<IFormRepo, FormRepo>();
+builder.Services.AddTransient<IEmployeesRepo, EmployeesRepo>();
+builder.Services.AddTransient<IShiftRepo, ShiftRepo>();
+builder.Services.AddTransient<IBloodGroupRepo, BloodGroupRepo>();
+builder.Services.AddTransient<IBankRepo, BankRepo>();
+
 
 
 // Add services to the container.
