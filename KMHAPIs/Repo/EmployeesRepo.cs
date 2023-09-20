@@ -45,7 +45,6 @@ namespace KMHAPIs.Repo
         public async Task<GenericResponseModel> InsertEmployees(EmployeesRequestModel rm)
         {
             try
-
             {
                 var procedureName = "CRUD_Employees";
                 var parameters = new DynamicParameters();
@@ -120,7 +119,6 @@ namespace KMHAPIs.Repo
 
         public async Task<GenericResponseModel> UpdateEmployees(EmployeesRequestModel rm)
         {
-
             try
             {
                 var procedureName = "CRUD_Employees";
@@ -133,7 +131,7 @@ namespace KMHAPIs.Repo
                 parameters.Add("@BankID", rm.BankID, DbType.Int64, ParameterDirection.Input);
                 parameters.Add("@BankAccount", rm.BankAccount, DbType.String, ParameterDirection.Input);
                 parameters.Add("@GroupID ", rm.GroupID, DbType.Int64, ParameterDirection.Input);
-                parameters.Add("@ShiftID", rm.ShiftID, DbType.Int64, ParameterDirection.Input);
+                parameters.Add("@ShiftID", rm.ShiftID, DbType.Int64, ParameterDirection.Input); 
                 parameters.Add("@RosterID", rm.RosterID, DbType.Int64, ParameterDirection.Input);
                 parameters.Add("@RelationName", rm.RelationName, DbType.String, ParameterDirection.Input);
                 parameters.Add("@Relation", rm.Relation, DbType.String, ParameterDirection.Input);
