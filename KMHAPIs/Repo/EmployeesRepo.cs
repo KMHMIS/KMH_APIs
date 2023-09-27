@@ -51,7 +51,7 @@ namespace KMHAPIs.Repo
        
 
                 parameters.Add("@Action", rm.Action, DbType.String, ParameterDirection.Input);
-                parameters.Add("@EmployeeName ", rm.EmployeeName, DbType.String, ParameterDirection.Input);
+                parameters.Add("@EmployeeName", rm.EmployeeName, DbType.String, ParameterDirection.Input);
                 parameters.Add("@CardNo", rm.CardNo, DbType.String, ParameterDirection.Input);
                 parameters.Add("@DepartmentID", rm.DepartmentID, DbType.Int64, ParameterDirection.Input);
                 parameters.Add("@DesignationID", rm.DesignationID, DbType.Int64, ParameterDirection.Input);
