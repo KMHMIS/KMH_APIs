@@ -49,5 +49,11 @@ namespace KMHAPIs.Controllers
         {
             return Ok(await _repo.GetUserByActive(action));
         }
+        [HttpGet]
+        [Route("GetUserName")]
+        public async Task<IActionResult> GetUserName(string action)
+        {
+            return Ok(await _repo.GetUserName(action));
+        }
     }
 }

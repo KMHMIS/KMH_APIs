@@ -11,5 +11,6 @@ namespace KMHAPIs.IRepo
         Task<GenericResponseModel> DeleteUser(int Id,string action);
         Task<GenericResponseModel> GetTableData(string action);
         Task<GenericResponseModel> GetUserByActive(string action);
+        Task<GenericResponseModel> GetUserName(string action);
     }
 }
